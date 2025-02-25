@@ -33,5 +33,5 @@ documentation for details.
    :caption: Hosting on GitHub Pages
    :numbered:
    
-   env-setup/install-nodejs
+   env-setup/install-github-pages
    
