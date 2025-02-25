@@ -18,6 +18,7 @@ documentation for details.
    
    env-setup/install-python
    env-setup/install-sphinx-doc
+   env-setup/install-github-pages
    
 
 .. toctree::
@@ -26,12 +27,12 @@ documentation for details.
    :numbered:
    
    env-setup/install-nodejs
-   
+   env-setup/install-vscode-typescript
 
 .. toctree::
    :maxdepth: 2
    :caption: Hosting on GitHub Pages
    :numbered:
    
-   env-setup/install-github-pages
+   
    
