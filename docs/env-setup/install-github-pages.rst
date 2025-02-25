@@ -64,12 +64,7 @@ Add the GitHub Action to the new Git repository
                 publish_dir: _build/
                 force_orphan: true
                 
-- Navigate to the ``Actions`` tab
-    
-    - Under ``All workflows``
-    - Check ``documentation`` workflow is running
-    - Click to see the running details
-    
+
 **************************************************************************************************
 Enable GitHub Pages
 **************************************************************************************************
@@ -77,7 +72,11 @@ Enable GitHub Pages
 - On GitHub go to ``Settings`` -> ``Pages``.
 - In the ``Source`` section, choose ``Deploy from a branch`` in the dropdown menu.
 - In the ``Branch`` section choose ``gh-pages`` and ``/root`` in the dropdown menus and click save.
-- Verify the pages deployment in the Actions list.
+- Verify the pages deployment in the Actions list. Navigate to the ``Actions`` tab, verify: 
+    
+    - Under ``All workflows``
+    - Check ``documentation`` workflow is running
+    - Click to see the running details
     
 **************************************************************************************************
 Verify the result
