@@ -1,13 +1,31 @@
-name: Hello World
+name: Publish Sphinx Documentation
 
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request, workflow_dispatch]
 
+permissions:
+  contents: write
 jobs:
-  hello:
+  publish_sphinx_docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: say hello
-        run: echo "Hello, World!"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' 
+      - name: Install dependencies
+        run: |
+          pip install sphinx sphinx_rtd_theme myst_parser sphinx-autobuild sphinx-design
+      - name: Sphinx build
+        run: |
+          sphinx-build docs _build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true
+
