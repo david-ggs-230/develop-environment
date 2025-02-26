@@ -28,6 +28,8 @@ documentation for details.
    
    env-setup/install-nodejs
    env-setup/install-vscode-typescript
+   env-setup/create-react-app
+   
 
 .. toctree::
    :maxdepth: 2
