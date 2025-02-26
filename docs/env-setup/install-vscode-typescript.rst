@@ -91,6 +91,25 @@ Install VSCode extensions
 **************************************************************************************************
 
 ==================================================================================================
+Install GitHub Copilot Extension
+==================================================================================================
+
+To install GitHub Copilot in Visual Studio Code (VS Code), follow these steps:
+
+#. Open up the Extensions area in Visual Studio Code, click the ``Extensions`` icon (or press Ctrl+Shift+X) or click the following menus in sequence: 
+    
+    - On ``Windows``: File > Preferences > Extensions
+    - On ``macOS``: Code > Preferences > Extensions
+    
+#. Enter ``GitHub Copilot`` into the extensions list search box
+#. Select the ``GitHub Copilot`` extension by GitHub
+#. Click the Install button to install the extension.
+#. Make sure the ``GitHub Copilot Chat`` extension is installed as well
+#. Sign in to GitHub
+#. Start Using GitHub Copilot
+
+
+==================================================================================================
 Adding linting to VSCode
 ==================================================================================================
 
