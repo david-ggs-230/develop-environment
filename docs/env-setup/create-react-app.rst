@@ -73,6 +73,42 @@ Install dependencies and run the project
         
 
 ==================================================================================================
+Hosting the React App on GitHub Pages
+==================================================================================================
+    
+    - Creating a github repo, ``main`` branch
+    - Create a ``gh-pages`` branch
+    - Enable GitHub Pages by configuring ``Settings`` -> ``Pages``
+    - Create the deploying base folder in the ``gh-pages`` branch
+        
+        - if deploying to `https://<USERNAME>.github.io/<repo-name>/<deploying-base-dir>/<sub-dir>/ <https://\<USERNAME\>.github.io/\<repo-name\>/\<deploying-base-dir\>/\<sub-dir\>/>`_, then create:
+            
+            - in the ``gh-pages`` branch, create ``/<repo-name>/<deploying-base-dir>/<sub-dir>/`` folder structure
+            - upload the build files to `https://github.com/<USERNAME>/<repo-name>/<deploying-base-dir>/<sub-dir>/ <https://github.com/\<USERNAME\>/\<repo-name\>/\<deploying-base-dir\>/\<sub-dir\>/>`_ in the ``gh-pages`` branch
+            - the deploying base is ``/<repo-name>/<deploying-base-dir>/<sub-dir>/``
+            - the deploying url: ``https://<USERNAME>.github.io/<repo-name>/<deploying-base-dir>/<sub-dir>/``
+            
+        - Configure the build base url:
+            
+            - open vite.config.js file
+            - set base to ``/<repo-name>/<deploying-base-dir>/<sub-dir>/`` ::
+                
+                export default defineConfig({
+                    plugins: [react()],
+                    base: '/<repo-name>/<deploying-base-dir>/<sub-dir>/',
+                })
+                
+    - Build the app ::
+        
+        # npm
+        npm run build
+        # yarn
+        yarn run build
+        
+    - Push the <dist> folder contents to the deploying base folder in the ``gh-pages`` branch
+    
+    
+==================================================================================================
 ESLint configuration (Optional)
 ==================================================================================================
 
