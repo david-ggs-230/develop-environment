@@ -62,7 +62,10 @@ Sphinx-Doc Initialization
     .. code-block:: sh
         :linenos:
         
+        # interactive
         sphinx-quickstart docs
+        # Non-interactive
+        sphinx-quickstart --sep --project="<project-name>" --author="<author-name>" -v "<version>" --quiet docs 
         # run html build: 
         #    1. sphinx-build -M html docs/source/ docs/build/
         #       # OR
