@@ -28,8 +28,10 @@ Create Vite Project
         
         # npm
         npm create vite@latest my-app -- --template react
+        npm create vite@latest my-app -- --template react-ts
         # yarn
         yarn create vite my-app --template react
+        yarn create vite my-app --template react-ts
         
 
 ==================================================================================================
