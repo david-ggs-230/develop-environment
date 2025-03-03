@@ -107,38 +107,124 @@ Hosting the React App on GitHub Pages
         
     - Push the <dist> folder contents to the deploying base folder in the ``gh-pages`` branch
     
-    
+
 ==================================================================================================
-ESLint configuration (Optional)
+Install EditorConfig for VS Code (Optional)
 ==================================================================================================
 
-ESLint is a popular, open source linter for JavaScript. Install ESLint with the recommended configuration for React ``eslint-config-react-app``. This package includes the shareable ESLint configuration used by Create React App. This configuration is used by Create React App, which includes it by default. This config also ships with optional Jest rules for ESLint (based on eslint-plugin-jest). If you want to use this ESLint configuration in a project not built with Create React App, you can install it with the following steps: 
-    
-    - Install this package and ESLint ::
-        
-        npm install --save-dev eslint-config-react-app eslint@^8.0.0
-        
-    - Create a file named .eslintrc.json with following contents in the root folder of the project:
-        
-        .. code-block:: cfg
-          :caption: contents of .eslintrc.json
-          :linenos:
-          
-          {
-              "extends": "react-app"
-          }
-          
-    - Enable optional Jest rules for ESLint 
-        
-        .. code-block:: cfg
-          :caption: contents of .eslintrc.json
-          :linenos:
-          
-          {
-              "extends": ["react-app", "react-app/jest"]
-          }
-          
+EditorConfig (https://editorconfig.org) is picked up by IDEs to alter their default behavior (e.g. make IDEs put the right tab size when you press TAB or always add a new line at the end of the file on save). It attempts to override user/workspace settings with settings found in .editorconfig files. No additional or vscode-specific files are required. As with any EditorConfig plugin, if root=true is not specified, EditorConfig will continue to look for an .editorconfig file outside of the project.
 
+#. Add .editorconfig (https://editorconfig.org) to the root of the project ::
+    
+    root = true
+    
+    [*]
+    indent_style = space
+    indent_size = 2
+    end_of_line = lf
+    insert_final_newline = true
+    trim_trailing_whitespace = true
+    
+#. Reload VS Code (open the command palette, find and use “Reload Window”).
+
+==================================================================================================
+ESLint and Prettier configuration (Optional)
+==================================================================================================
+
+Reference: `Setup ReactJS typescript project with vite, eslint, and prettier 2024 by Josprima, 
+Aug 20, 2024 <https://medium.com/@josprima.id/setup-reactjs-typescript-project-with-vite-eslint-and-prettier-2024-e714f7daca1a>`_ 
+
+Linting is the process of checking code for potential problems. It is common practice to use linting tools to catch problems early in the development process as code is written. ESLint is a popular tool that can lint React and TypeScript code. 
+
+Automatic code formatting ensures code is consistently formatted, which helps its readability. Having consistently formatted code also helps developers see the important changes in a code review – rather than differences in formatting. Prettier is a popular tool capable of formatting React and TypeScript code.
+
+    
+    - Install dependencies ::
+        
+        # npm
+        npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier  eslint-plugin-react
+        # yarn
+        yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier  eslint-plugin-react 
+        
+    - Modify the eslint.config.js file with following contents: 
+        
+        .. code-block:: cfg
+          :caption: contents of eslint.config.js
+          :linenos:
+          
+          import js from "@eslint/js";
+          import globals from "globals";
+          import reactHooks from "eslint-plugin-react-hooks";
+          import reactRefresh from "eslint-plugin-react-refresh";
+          import tseslint from "typescript-eslint";
+          import react from "eslint-plugin-react";
+          import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
+          
+          export default tseslint
+            .config(
+              { ignores: ["dist"] },
+              {
+                //extends: [js.configs.recommended, ...tseslint.configs.recommended],
+                extends: [
+                  js.configs.recommended,
+                  ...tseslint.configs.recommendedTypeChecked,
+                ],
+                files: ["**/*.{ts,tsx}"],
+                languageOptions: {
+                  ecmaVersion: 2020,
+                  globals: globals.browser,
+                  parserOptions: {
+                    project: ["./tsconfig.node.json", "./tsconfig.app.json"],
+                    tsconfigRootDir: import.meta.dirname,
+                  },
+                },
+                settings: {
+                  react: {
+                    version: "detect",
+                  },
+                },
+                plugins: {
+                  "react-hooks": reactHooks,
+                  "react-refresh": reactRefresh,
+                  react: react,
+                },
+                rules: {
+                  ...reactHooks.configs.recommended.rules,
+                  "react-refresh/only-export-components": [
+                    "warn",
+                    { allowConstantExport: true },
+                  ],
+                  ...react.configs.recommended.rules,
+                  ...react.configs["jsx-runtime"].rules,
+                },
+              },
+            )
+            .concat(eslintPluginPrettier);
+          
+    - Edit the eslint scripts in the package.json file: 
+        
+        .. code-block:: cfg
+          :caption: contents of eslint.config.js
+          :linenos:
+          
+          "scripts": {
+            ... ,
+            "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+            "lint:fix": "eslint src --ext ts,tsx --fix",
+          },
+          
+    - Run ESLint:
+        
+        .. code-block:: sh
+          :linenos:
+          
+          #npm
+          npm run lint
+          npm run lint:fix
+          #yarn
+          yarn lint
+          yarn lint:fix
+          
 **************************************************************************************************
 Create Next.js-powered React App
 **************************************************************************************************

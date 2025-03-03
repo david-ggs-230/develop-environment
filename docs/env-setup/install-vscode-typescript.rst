@@ -253,4 +253,25 @@ Carry out the following steps to install and configure a Prettier extension into
             - Make sure Default Formatter is set to ``Prettier - Code formatter``
             - This is the default formatter that Visual Studio Code should use to format code
             
-#. The Prettier extension for Visual Studio Code is now installed and configured in the project. 
+#. The Prettier extension for Visual Studio Code is now installed and configured in the project.
+
+
+--------------------------------------------------------------------------------------------------
+Install EditorConfig for VS Code
+--------------------------------------------------------------------------------------------------
+
+EditorConfig (https://editorconfig.org) is picked up by IDEs to alter their default behavior (e.g. make IDEs put the right tab size when you press TAB or always add a new line at the end of the file on save). It attempts to override user/workspace settings with settings found in .editorconfig files. No additional or vscode-specific files are required. As with any EditorConfig plugin, if root=true is not specified, EditorConfig will continue to look for an .editorconfig file outside of the project.
+
+#. Add .editorconfig (https://editorconfig.org) to the root of the project ::
+    
+    root = true
+    
+    [*]
+    indent_style = space
+    indent_size = 2
+    end_of_line = lf
+    insert_final_newline = true
+    trim_trailing_whitespace = true
+    
+#. Reload VS Code (open the command palette, find and use “Reload Window”).
+
