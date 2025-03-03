@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Sphinx Doc Environment &mdash; Develop Environment Setup Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom-theme.css?v=63e39a35" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Hosting Sphinx Doc on GitHub Pages" href="install-github-pages.html" />
+    <link rel="prev" title="1. Python Environment" href="install-python.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Develop Environment Setup Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install-python.html">1. Python Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sphinx Doc Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-python">2.1. Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-sphinx-doc-project">2.2. Create Sphinx-Doc Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-doc-initialization">2.3. Sphinx-Doc Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-doc-configuration">2.4. Sphinx-Doc Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#document-structures">2.5. Document Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-command">2.6. Build Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-github-pages.html">3. Hosting Sphinx Doc on GitHub Pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NodeJS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install-nodejs.html">1. NodeJS Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-vscode-typescript.html">2. TypeScript in Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-react-app.html">3. Create a React App</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Develop Environment Setup Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Sphinx Doc Environment</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="title-center h1" id="sphinx-doc-environment">
+<span id="install-sphinx-doc"></span><h1><span class="section-number">2. </span>Sphinx Doc Environment<a class="headerlink" href="#sphinx-doc-environment" title="Link to this heading"></a></h1>
+<section id="install-python">
+<h2><span class="section-number">2.1. </span>Install Python<a class="headerlink" href="#install-python" title="Link to this heading"></a></h2>
+<p>Install Python following the instructions in: <a class="reference internal" href="install-python.html#install-python"><span class="std std-ref">Python Environment</span></a>.</p>
+<p>Quick guide:</p>
+<blockquote>
+<div><ul>
+<li><p>Go to the official Python download page and choose the version suitable for your system.</p></li>
+<li><p>Run the installer by double-clicking it and follow the on-screen prompts. Be sure to check the “Add Python to PATH” option, which will automatically update your PATH environment variable.</p></li>
+<li><p>Click “Install Now” for a standard installation, or choose “Customize installation” if you’d like to modify settings such as the installation location and advanced options.</p></li>
+<li><p>To verify Python installation, run the following commands:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># verify Python installation</span>
+<span class="linenos">2</span>python<span class="w"> </span>--version
+<span class="linenos">3</span>python<span class="w"> </span>-V
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="create-sphinx-doc-project">
+<h2><span class="section-number">2.2. </span>Create Sphinx-Doc Project<a class="headerlink" href="#create-sphinx-doc-project" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Create the Sphinx-Doc folder &lt;doc&gt;.</p></li>
+<li><p>Navigate to the &lt;doc&gt; folder.</p></li>
+<li><p>Create and Activate Python virtual environment</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="linenos">2</span><span class="c1"># Activate the Python virtual environment - Windows</span>
+<span class="linenos">3</span>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install Sphinx-Doc packages.</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Installing py packages</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple<span class="w"> </span>-U<span class="w"> </span>sphinx<span class="w"> </span>sphinx_rtd_theme<span class="w"> </span>myst-parser<span class="w"> </span>sphinx-autobuild<span class="w"> </span>sphinx-design
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="sphinx-doc-initialization">
+<h2><span class="section-number">2.3. </span>Sphinx-Doc Initialization<a class="headerlink" href="#sphinx-doc-initialization" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Run sphinx-quickstart &lt;doc-folder&gt;</p></li>
+<li><p>Generate html build</p></li>
+<li><p>Run command:</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># interactive</span>
+<span class="linenos"> 2</span>sphinx-quickstart<span class="w"> </span>docs
+<span class="linenos"> 3</span><span class="c1"># Non-interactive</span>
+<span class="linenos"> 4</span>sphinx-quickstart<span class="w"> </span>--sep<span class="w"> </span>--project<span class="o">=</span><span class="s2">&quot;&lt;project-name&gt;&quot;</span><span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;&lt;author-name&gt;&quot;</span><span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;&lt;version&gt;&quot;</span><span class="w"> </span>--quiet<span class="w"> </span>docs
+<span class="linenos"> 5</span><span class="c1"># run html build:</span>
+<span class="linenos"> 6</span><span class="c1">#    1. sphinx-build -M html docs/source/ docs/build/</span>
+<span class="linenos"> 7</span><span class="c1">#       # OR</span>
+<span class="linenos"> 8</span><span class="c1">#    2. cd docs &amp;&amp; make clean &amp;&amp; make html</span>
+<span class="linenos"> 9</span><span class="nb">cd</span><span class="w"> </span>docs
+<span class="linenos">10</span>make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="sphinx-doc-configuration">
+<h2><span class="section-number">2.4. </span>Sphinx-Doc Configuration<a class="headerlink" href="#sphinx-doc-configuration" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Modify the conf.py file</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 2.1 </span><span class="caption-text">contents of the conf.py file</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+<span class="linenos"> 4</span><span class="c1">#</span>
+<span class="linenos"> 5</span><span class="c1"># For the full list of built-in configuration values, see the documentation:</span>
+<span class="linenos"> 6</span><span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># -- Project information -----------------------------------------------------</span>
+<span class="linenos"> 9</span><span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="na">import sphinx_rtd_theme</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="na">project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Sphinx Documentation&#39;</span>
+<span class="linenos">14</span><span class="na">copyright</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;2025, David G.&#39;</span>
+<span class="linenos">15</span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;David G.&#39;</span>
+<span class="linenos">16</span><span class="na">release</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;1.0.0&#39;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+<span class="linenos">19</span><span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1">#extensions = []</span>
+<span class="linenos">22</span><span class="na">extensions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos">23</span><span class="w">        </span><span class="na">&#39;myst_parser&#39;,</span>
+<span class="linenos">24</span><span class="w">        </span><span class="na">&#39;sphinx_rtd_theme&#39;,</span>
+<span class="linenos">25</span><span class="w">        </span><span class="na">&quot;sphinx_design&quot;</span>
+<span class="linenos">26</span><span class="w">    </span><span class="na">]</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="na">templates_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[&#39;_templates&#39;]</span>
+<span class="linenos">29</span><span class="na">exclude_patterns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[]</span>
+<span class="linenos">30</span><span class="na">myst_enable_extensions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[&quot;colon_fence&quot;]</span>
+<span class="linenos">31</span><span class="na">numfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">True</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+<span class="linenos">34</span><span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="c1">#html_theme = &#39;alabaster&#39;</span>
+<span class="linenos">37</span><span class="c1">#html_static_path = [&#39;_static&#39;]</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="na">html_theme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sphinx_rtd_theme&quot;</span>
+<span class="linenos">40</span><span class="c1">#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]</span>
+<span class="linenos">41</span><span class="c1">#html_theme_path = [&quot;.&quot;]</span>
+<span class="linenos">42</span><span class="na">html_static_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[&#39;_static&#39;]</span>
+<span class="linenos">43</span><span class="na">html_show_sourcelink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">False</span>
+<span class="linenos">44</span><span class="na">html_css_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos">45</span><span class="w">    </span><span class="na">&#39;css/custom-theme.css&#39;</span>
+<span class="linenos">46</span><span class="w">    </span><span class="c1"># &#39;css/bootstrap.min.css&#39;</span>
+<span class="linenos">47</span><span class="na">]</span>
+<span class="linenos">48</span><span class="na">html_js_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos">49</span><span class="w">    </span><span class="c1"># &#39;css/bootstrap.min.js&#39;</span>
+<span class="linenos">50</span><span class="na">]</span>
+<span class="linenos">51</span><span class="na">html_theme_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">52</span><span class="w">    </span><span class="c1"># &#39;analytics_id&#39;: &#39;G-XXXXXXXXXX&#39;,  #  Provided by Google in your dashboard</span>
+<span class="linenos">53</span><span class="w">    </span><span class="c1"># &#39;analytics_anonymize_ip&#39;: False,</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span>
+<span class="linenos">56</span><span class="w">    </span><span class="na">&#39;logo_only&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">False,</span>
+<span class="linenos">57</span><span class="w">    </span><span class="c1">#&#39;display_version&#39;: True,</span>
+<span class="linenos">58</span><span class="w">    </span><span class="na">&#39;prev_next_buttons_location&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;bottom&#39;</span><span class="na">,</span>
+<span class="linenos">59</span><span class="w">    </span><span class="na">&#39;style_external_links&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">True,</span>
+<span class="linenos">60</span><span class="w">    </span><span class="na">&#39;vcs_pageview_mode&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="na">,</span>
+<span class="linenos">61</span><span class="w">    </span><span class="c1">#&#39;style_nav_header_background&#39;: &#39;white&#39;,</span>
+<span class="linenos">62</span><span class="w">    </span><span class="c1"># Toc options</span>
+<span class="linenos">63</span><span class="w">    </span><span class="na">&#39;collapse_navigation&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">True,</span>
+<span class="linenos">64</span><span class="w">    </span><span class="na">&#39;sticky_navigation&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">True,</span>
+<span class="linenos">65</span><span class="w">    </span><span class="na">&#39;navigation_depth&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">6,</span>
+<span class="linenos">66</span><span class="w">    </span><span class="na">&#39;includehidden&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">True,</span>
+<span class="linenos">67</span><span class="w">    </span><span class="na">&#39;titles_only&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="linenos">68</span><span class="na">}</span>
+<span class="linenos">69</span>
+<span class="linenos">70</span><span class="na">html_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">71</span><span class="w">    </span><span class="na">&#39;display_github&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">False</span>
+<span class="linenos">72</span><span class="na">}</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create custom-theme.css file</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 2.2 </span><span class="caption-text">contents of the _static/css/custom-theme.css file</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="na">/*.wy-breadcrumbs&gt;li.wy-breadcrumbs-aside {</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="na">display</span><span class="o">:</span><span class="w"> </span><span class="s">none</span><span class="c1">;</span>
+<span class="linenos"> 3</span><span class="na">}*/</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="na">.wy-nav-content {</span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="na">max-width</span><span class="o">:</span><span class="w"> </span><span class="s">90%</span><span class="c1">;</span>
+<span class="linenos"> 7</span><span class="w">   </span><span class="na">background</span><span class="o">:</span><span class="w"> </span><span class="c1">#fcfcfc;</span>
+<span class="linenos"> 8</span><span class="na">}</span>
+<span class="linenos"> 9</span><span class="na">.wy-nav-content-wrap {</span>
+<span class="linenos">10</span><span class="w">   </span><span class="na">background</span><span class="o">:</span><span class="w"> </span><span class="c1">#fcfcfc;</span>
+<span class="linenos">11</span><span class="na">}</span>
+<span class="linenos">12</span><span class="na">.rst-content {</span>
+<span class="linenos">13</span><span class="w">    </span><span class="na">background-color</span><span class="o">:</span><span class="w"> </span><span class="s">transparent</span><span class="c1">;</span>
+<span class="linenos">14</span><span class="na">}</span>
+<span class="linenos">15</span><span class="na">.title-center h1 {</span>
+<span class="linenos">16</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">250%</span><span class="c1">;</span>
+<span class="linenos">17</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">18</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">19</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">20</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">center</span><span class="c1">;</span>
+<span class="linenos">21</span><span class="na">}</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="na">p.title-center.h2 {</span>
+<span class="linenos">24</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">200%</span><span class="c1">;</span>
+<span class="linenos">25</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">26</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">center</span><span class="c1">;</span>
+<span class="linenos">27</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">28</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">29</span><span class="na">}</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="na">p.title-center.h1 {</span>
+<span class="linenos">32</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">250%</span><span class="c1">;</span>
+<span class="linenos">33</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">34</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">35</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">36</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">center</span><span class="c1">;</span>
+<span class="linenos">37</span><span class="na">}</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="na">p.title-center.h6 {</span>
+<span class="linenos">40</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">100%</span><span class="c1">;</span>
+<span class="linenos">41</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">42</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">center</span><span class="c1">;</span>
+<span class="linenos">43</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">44</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">45</span><span class="na">}</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span><span class="na">p.title-left.h2 {</span>
+<span class="linenos">49</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">200%</span><span class="c1">;</span>
+<span class="linenos">50</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">51</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">left</span><span class="c1">;</span>
+<span class="linenos">52</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">53</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">54</span><span class="na">}</span>
+<span class="linenos">55</span>
+<span class="linenos">56</span><span class="na">p.title-left.h1 {</span>
+<span class="linenos">57</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">250%</span><span class="c1">;</span>
+<span class="linenos">58</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">59</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">60</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">61</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">left</span><span class="c1">;</span>
+<span class="linenos">62</span><span class="na">}</span>
+<span class="linenos">63</span>
+<span class="linenos">64</span><span class="na">p.title-left.h3 {</span>
+<span class="linenos">65</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">150%</span><span class="c1">;</span>
+<span class="linenos">66</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">67</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">left</span><span class="c1">;</span>
+<span class="linenos">68</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">69</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">70</span><span class="na">}</span>
+<span class="linenos">71</span>
+<span class="linenos">72</span>
+<span class="linenos">73</span><span class="na">p.title-left.h4 {</span>
+<span class="linenos">74</span><span class="w">    </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="s">125%</span><span class="c1">;</span>
+<span class="linenos">75</span><span class="w">    </span><span class="na">margin-top</span><span class="o">:</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="linenos">76</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">left</span><span class="c1">;</span>
+<span class="linenos">77</span><span class="w">    </span><span class="na">font-weight</span><span class="o">:</span><span class="w"> </span><span class="s">700</span><span class="c1">;</span>
+<span class="linenos">78</span><span class="w">    </span><span class="na">font-family</span><span class="o">:</span><span class="w"> </span><span class="s">Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif</span><span class="c1">;</span>
+<span class="linenos">79</span><span class="na">}</span>
+<span class="linenos">80</span>
+<span class="linenos">81</span>
+<span class="linenos">82</span><span class="na">.rst-content div.code-block-caption {</span>
+<span class="linenos">83</span><span class="w">    </span><span class="na">text-align</span><span class="o">:</span><span class="w"> </span><span class="s">left</span><span class="c1">;</span>
+<span class="linenos">84</span><span class="na">}</span>
+<span class="linenos">85</span>
+<span class="linenos">86</span><span class="na">img.sd-svg-primary { filter</span><span class="o">:</span><span class="w"> </span><span class="s">invert(.5) sepia(0.5) saturate(80) hue-rotate(208deg)</span><span class="c1">; }</span>
+<span class="linenos">87</span>
+<span class="linenos">88</span><span class="na">span.sd-text-decoration-line-underline {</span>
+<span class="linenos">89</span><span class="w">    </span><span class="na">text-decoration-line</span><span class="o">:</span><span class="w"> </span><span class="s">underline</span><span class="c1">;</span>
+<span class="linenos">90</span><span class="na">}</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="document-structures">
+<h2><span class="section-number">2.5. </span>Document Structures<a class="headerlink" href="#document-structures" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">###########</span></code> with overline, for parts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">***********</span></code> with overline, for chapters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">===========</span></code> for sections</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-----------</span></code> for subsections</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^^^^^^^^^^^</span></code> for subsubsections</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span></code> for paragraphs</p></li>
+</ol>
+</section>
+<section id="build-command">
+<h2><span class="section-number">2.6. </span>Build Command<a class="headerlink" href="#build-command" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Activate .venv</span>
+<span class="linenos"> 2</span>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<span class="linenos"> 3</span><span class="c1"># navigate to docs folder</span>
+<span class="linenos"> 4</span><span class="nb">cd</span><span class="w"> </span>docs
+<span class="linenos"> 5</span><span class="c1"># clean</span>
+<span class="linenos"> 6</span>make<span class="w"> </span>clean
+<span class="linenos"> 7</span><span class="c1"># build html</span>
+<span class="linenos"> 8</span>make<span class="w"> </span>html
+<span class="linenos"> 9</span><span class="c1"># clean and build</span>
+<span class="linenos">10</span>make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install-python.html" class="btn btn-neutral float-left" title="1. Python Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install-github-pages.html" class="btn btn-neutral float-right" title="3. Hosting Sphinx Doc on GitHub Pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, David G..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

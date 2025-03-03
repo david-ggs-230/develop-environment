@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Create a React App &mdash; Develop Environment Setup Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom-theme.css?v=63e39a35" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="2. TypeScript in Visual Studio Code" href="install-vscode-typescript.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Develop Environment Setup Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install-python.html">1. Python Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-sphinx-doc.html">2. Sphinx Doc Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-github-pages.html">3. Hosting Sphinx Doc on GitHub Pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NodeJS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install-nodejs.html">1. NodeJS Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-vscode-typescript.html">2. TypeScript in Visual Studio Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Create a React App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-react-app-with-vite">3.1. Create a React App with Vite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">3.1.1. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-vite-project">3.1.2. Create Vite Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-dependencies-and-run-the-project">3.1.3. Install dependencies and run the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hosting-the-react-app-on-github-pages">3.1.4. Hosting the React App on GitHub Pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-editorconfig-for-vs-code-optional">3.1.5. Install EditorConfig for VS Code (Optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eslint-and-prettier-configuration-optional">3.1.6. ESLint and Prettier configuration (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-next-js-powered-react-app">3.2. Create Next.js-powered React App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.2.1. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-new-next-js-project">3.2.2. Create a new Next.js project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.3. Install dependencies and run the project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Develop Environment Setup Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Create a React App</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="title-center h1" id="create-a-react-app">
+<span id="create-react-app"></span><h1><span class="section-number">3. </span>Create a React App<a class="headerlink" href="#create-a-react-app" title="Link to this heading"></a></h1>
+<section id="create-a-react-app-with-vite">
+<h2><span class="section-number">3.1. </span>Create a React App with Vite<a class="headerlink" href="#create-a-react-app-with-vite" title="Link to this heading"></a></h2>
+<section id="prerequisites">
+<h3><span class="section-number">3.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Vite requires Node.js version ≥ 18. and npm version 8. However, some templates require a higher Node.js version to work.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Node version ≥ 18.</p></li>
+<li><p>NPM version 8.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="create-vite-project">
+<h3><span class="section-number">3.1.2. </span>Create Vite Project<a class="headerlink" href="#create-vite-project" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Create a React project using Vite with a single command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">create</span> <span class="n">vite</span><span class="nd">@latest</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span> <span class="o">--</span><span class="n">template</span> <span class="n">react</span>
+<span class="n">npm</span> <span class="n">create</span> <span class="n">vite</span><span class="nd">@latest</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span> <span class="o">--</span><span class="n">template</span> <span class="n">react</span><span class="o">-</span><span class="n">ts</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">create</span> <span class="n">vite</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">template</span> <span class="n">react</span>
+<span class="n">yarn</span> <span class="n">create</span> <span class="n">vite</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">template</span> <span class="n">react</span><span class="o">-</span><span class="n">ts</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="install-dependencies-and-run-the-project">
+<h3><span class="section-number">3.1.3. </span>Install dependencies and run the project<a class="headerlink" href="#install-dependencies-and-run-the-project" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>Navigate to the project directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install the dependencies</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">install</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start the project</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#The application is running at http://localhost:5173</span>
+<span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">dev</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">dev</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build the app</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>Testing the built app locally</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">preview</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">preview</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="hosting-the-react-app-on-github-pages">
+<h3><span class="section-number">3.1.4. </span>Hosting the React App on GitHub Pages<a class="headerlink" href="#hosting-the-react-app-on-github-pages" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>Creating a github repo, <code class="docutils literal notranslate"><span class="pre">main</span></code> branch</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
+<li><p>Enable GitHub Pages by configuring <code class="docutils literal notranslate"><span class="pre">Settings</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Pages</span></code></p></li>
+<li><p>Create the deploying base folder in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p>
+<blockquote>
+<div><ul>
+<li><p>if deploying to <a class="reference external" href="https://&lt;USERNAME&gt;.github.io/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/">https://&lt;USERNAME&gt;.github.io/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</a>, then create:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch, create <code class="docutils literal notranslate"><span class="pre">/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</span></code> folder structure</p></li>
+<li><p>upload the build files to <a class="reference external" href="https://github.com/&lt;USERNAME&gt;/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/">https://github.com/&lt;USERNAME&gt;/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</a> in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
+<li><p>the deploying base is <code class="docutils literal notranslate"><span class="pre">/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</span></code></p></li>
+<li><p>the deploying url: <code class="docutils literal notranslate"><span class="pre">https://&lt;USERNAME&gt;.github.io/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Configure the build base url:</p>
+<blockquote>
+<div><ul>
+<li><p>open vite.config.js file</p></li>
+<li><p>set base to <code class="docutils literal notranslate"><span class="pre">/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">default</span> <span class="n">defineConfig</span><span class="p">({</span>
+    <span class="n">plugins</span><span class="p">:</span> <span class="p">[</span><span class="n">react</span><span class="p">()],</span>
+    <span class="n">base</span><span class="p">:</span> <span class="s1">&#39;/&lt;repo-name&gt;/&lt;deploying-base-dir&gt;/&lt;sub-dir&gt;/&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Build the app</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>Push the &lt;dist&gt; folder contents to the deploying base folder in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="install-editorconfig-for-vs-code-optional">
+<h3><span class="section-number">3.1.5. </span>Install EditorConfig for VS Code (Optional)<a class="headerlink" href="#install-editorconfig-for-vs-code-optional" title="Link to this heading"></a></h3>
+<p>EditorConfig (<a class="reference external" href="https://editorconfig.org">https://editorconfig.org</a>) is picked up by IDEs to alter their default behavior (e.g. make IDEs put the right tab size when you press TAB or always add a new line at the end of the file on save). It attempts to override user/workspace settings with settings found in .editorconfig files. No additional or vscode-specific files are required. As with any EditorConfig plugin, if root=true is not specified, EditorConfig will continue to look for an .editorconfig file outside of the project.</p>
+<ol class="arabic">
+<li><p>Add .editorconfig (<a class="reference external" href="https://editorconfig.org">https://editorconfig.org</a>) to the root of the project</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="p">[</span><span class="o">*</span><span class="p">]</span>
+<span class="n">indent_style</span> <span class="o">=</span> <span class="n">space</span>
+<span class="n">indent_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">end_of_line</span> <span class="o">=</span> <span class="n">lf</span>
+<span class="n">insert_final_newline</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">trim_trailing_whitespace</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+</li>
+<li><p>Reload VS Code (open the command palette, find and use “Reload Window”).</p></li>
+</ol>
+</section>
+<section id="eslint-and-prettier-configuration-optional">
+<h3><span class="section-number">3.1.6. </span>ESLint and Prettier configuration (Optional)<a class="headerlink" href="#eslint-and-prettier-configuration-optional" title="Link to this heading"></a></h3>
+<p>Reference: <a class="reference external" href="https://medium.com/&#64;josprima.id/setup-reactjs-typescript-project-with-vite-eslint-and-prettier-2024-e714f7daca1a">Setup ReactJS typescript project with vite, eslint, and prettier 2024 by Josprima,
+Aug 20, 2024</a></p>
+<p>Linting is the process of checking code for potential problems. It is common practice to use linting tools to catch problems early in the development process as code is written. ESLint is a popular tool that can lint React and TypeScript code.</p>
+<p>Automatic code formatting ensures code is consistently formatted, which helps its readability. Having consistently formatted code also helps developers see the important changes in a code review – rather than differences in formatting. Prettier is a popular tool capable of formatting React and TypeScript code.</p>
+<blockquote>
+<div><ul>
+<li><p>Install dependencies</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">dev</span> <span class="n">prettier</span> <span class="n">eslint</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">prettier</span> <span class="n">eslint</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">prettier</span>  <span class="n">eslint</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">react</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">add</span> <span class="o">--</span><span class="n">dev</span> <span class="n">prettier</span> <span class="n">eslint</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">prettier</span> <span class="n">eslint</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">prettier</span>  <span class="n">eslint</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">react</span>
+</pre></div>
+</div>
+</li>
+<li><p>Modify the eslint.config.js file with following contents:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 3.2 </span><span class="caption-text">contents of eslint.config.js</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="na">import js from &quot;@eslint/js&quot;;</span>
+<span class="linenos"> 2</span><span class="na">import globals from &quot;globals&quot;;</span>
+<span class="linenos"> 3</span><span class="na">import reactHooks from &quot;eslint-plugin-react-hooks&quot;;</span>
+<span class="linenos"> 4</span><span class="na">import reactRefresh from &quot;eslint-plugin-react-refresh&quot;;</span>
+<span class="linenos"> 5</span><span class="na">import tseslint from &quot;typescript-eslint&quot;;</span>
+<span class="linenos"> 6</span><span class="na">import react from &quot;eslint-plugin-react&quot;;</span>
+<span class="linenos"> 7</span><span class="na">import eslintPluginPrettier from &quot;eslint-plugin-prettier/recommended&quot;;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="na">export default tseslint</span>
+<span class="linenos">10</span><span class="w">  </span><span class="na">.config(</span>
+<span class="linenos">11</span><span class="w">    </span><span class="na">{ ignores</span><span class="o">:</span><span class="w"> </span><span class="s">[&quot;dist&quot;] },</span>
+<span class="linenos">12</span><span class="w">    </span><span class="na">{</span>
+<span class="linenos">13</span><span class="w">      </span><span class="na">//extends</span><span class="o">:</span><span class="w"> </span><span class="s">[js.configs.recommended, ...tseslint.configs.recommended],</span>
+<span class="linenos">14</span><span class="w">      </span><span class="na">extends</span><span class="o">:</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos">15</span><span class="w">        </span><span class="na">js.configs.recommended,</span>
+<span class="linenos">16</span><span class="w">        </span><span class="na">...tseslint.configs.recommendedTypeChecked,</span>
+<span class="linenos">17</span><span class="w">      </span><span class="na">],</span>
+<span class="linenos">18</span><span class="w">      </span><span class="na">files</span><span class="o">:</span><span class="w"> </span><span class="s">[&quot;**/*.{ts,tsx}&quot;],</span>
+<span class="linenos">19</span><span class="w">      </span><span class="na">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">20</span><span class="w">        </span><span class="na">ecmaVersion</span><span class="o">:</span><span class="w"> </span><span class="s">2020,</span>
+<span class="linenos">21</span><span class="w">        </span><span class="na">globals</span><span class="o">:</span><span class="w"> </span><span class="s">globals.browser,</span>
+<span class="linenos">22</span><span class="w">        </span><span class="na">parserOptions</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">23</span><span class="w">          </span><span class="na">project</span><span class="o">:</span><span class="w"> </span><span class="s">[&quot;./tsconfig.node.json&quot;, &quot;./tsconfig.app.json&quot;],</span>
+<span class="linenos">24</span><span class="w">          </span><span class="na">tsconfigRootDir</span><span class="o">:</span><span class="w"> </span><span class="s">import.meta.dirname,</span>
+<span class="linenos">25</span><span class="w">        </span><span class="na">},</span>
+<span class="linenos">26</span><span class="w">      </span><span class="na">},</span>
+<span class="linenos">27</span><span class="w">      </span><span class="na">settings</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">28</span><span class="w">        </span><span class="na">react</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">29</span><span class="w">          </span><span class="na">version</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;detect&quot;</span><span class="na">,</span>
+<span class="linenos">30</span><span class="w">        </span><span class="na">},</span>
+<span class="linenos">31</span><span class="w">      </span><span class="na">},</span>
+<span class="linenos">32</span><span class="w">      </span><span class="na">plugins</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">33</span><span class="w">        </span><span class="na">&quot;react-hooks&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">reactHooks,</span>
+<span class="linenos">34</span><span class="w">        </span><span class="na">&quot;react-refresh&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">reactRefresh,</span>
+<span class="linenos">35</span><span class="w">        </span><span class="na">react</span><span class="o">:</span><span class="w"> </span><span class="s">react,</span>
+<span class="linenos">36</span><span class="w">      </span><span class="na">},</span>
+<span class="linenos">37</span><span class="w">      </span><span class="na">rules</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">38</span><span class="w">        </span><span class="na">...reactHooks.configs.recommended.rules,</span>
+<span class="linenos">39</span><span class="w">        </span><span class="na">&quot;react-refresh/only-export-components&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos">40</span><span class="w">          </span><span class="na">&quot;warn&quot;,</span>
+<span class="linenos">41</span><span class="w">          </span><span class="na">{ allowConstantExport</span><span class="o">:</span><span class="w"> </span><span class="s">true },</span>
+<span class="linenos">42</span><span class="w">        </span><span class="na">],</span>
+<span class="linenos">43</span><span class="w">        </span><span class="na">...react.configs.recommended.rules,</span>
+<span class="linenos">44</span><span class="w">        </span><span class="na">...react.configs[&quot;jsx-runtime&quot;].rules,</span>
+<span class="linenos">45</span><span class="w">      </span><span class="na">},</span>
+<span class="linenos">46</span><span class="w">    </span><span class="na">},</span>
+<span class="linenos">47</span><span class="w">  </span><span class="na">)</span>
+<span class="linenos">48</span><span class="w">  </span><span class="na">.concat(eslintPluginPrettier);</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Edit the eslint scripts in the package.json file:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 3.3 </span><span class="caption-text">contents of eslint.config.js</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="na">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos">2</span><span class="w">  </span><span class="na">... ,</span>
+<span class="linenos">3</span><span class="w">  </span><span class="na">&quot;lint&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0&quot;</span><span class="na">,</span>
+<span class="linenos">4</span><span class="w">  </span><span class="na">&quot;lint:fix&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;eslint src --ext ts,tsx --fix&quot;</span><span class="na">,</span>
+<span class="linenos">5</span><span class="na">},</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run ESLint:</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#npm</span>
+<span class="linenos">2</span>npm<span class="w"> </span>run<span class="w"> </span>lint
+<span class="linenos">3</span>npm<span class="w"> </span>run<span class="w"> </span>lint:fix
+<span class="linenos">4</span><span class="c1">#yarn</span>
+<span class="linenos">5</span>yarn<span class="w"> </span>lint
+<span class="linenos">6</span>yarn<span class="w"> </span>lint:fix
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="create-next-js-powered-react-app">
+<h2><span class="section-number">3.2. </span>Create Next.js-powered React App<a class="headerlink" href="#create-next-js-powered-react-app" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">3.2.1. </span>Prerequisites<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>System requirements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Node.js 18.18 or later.</p></li>
+<li><p>macOS, Windows (including WSL), and Linux</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="create-a-new-next-js-project">
+<h3><span class="section-number">3.2.2. </span>Create a new Next.js project<a class="headerlink" href="#create-a-new-next-js-project" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Create a new Next.js project with a single command. To set up a new project non-interactively, pass command line arguments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npx create-next-app@latest &lt;react-app-name&gt;</span>
+<span class="n">npx</span> <span class="n">create</span><span class="o">-</span><span class="nb">next</span><span class="o">-</span><span class="n">app</span><span class="nd">@latest</span>
+<span class="n">npx</span> <span class="n">create</span><span class="o">-</span><span class="nb">next</span><span class="o">-</span><span class="n">app</span><span class="nd">@latest</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">js</span> <span class="o">--</span><span class="n">yes</span>
+<span class="n">npx</span> <span class="n">create</span><span class="o">-</span><span class="nb">next</span><span class="o">-</span><span class="n">app</span><span class="nd">@latest</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">ts</span> <span class="o">--</span><span class="n">yes</span>
+<span class="c1"># yarn create next-app &lt;react-app-name&gt;</span>
+<span class="n">yarn</span> <span class="n">create</span> <span class="nb">next</span><span class="o">-</span><span class="n">app</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">js</span> <span class="o">--</span><span class="n">src</span><span class="o">-</span><span class="nb">dir</span> <span class="o">--</span><span class="n">use</span><span class="o">-</span><span class="n">yarn</span> <span class="o">--</span><span class="n">yes</span>
+<span class="n">yarn</span> <span class="n">create</span> <span class="nb">next</span><span class="o">-</span><span class="n">app</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">--</span><span class="n">ts</span> <span class="o">--</span><span class="n">src</span><span class="o">-</span><span class="nb">dir</span> <span class="o">--</span><span class="n">use</span><span class="o">-</span><span class="n">yarn</span> <span class="o">--</span><span class="n">yes</span>
+</pre></div>
+</div>
+<p>Usage: create-next-app [project-directory] [options]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Options:
+  -V, --version                        output the version number
+  --ts, --typescript
+
+    Initialize as a TypeScript project. (default)
+
+  --js, --javascript
+
+    Initialize as a JavaScript project.
+
+  --tailwind
+
+    Initialize with Tailwind CSS config. (default)
+
+  --eslint
+
+    Initialize with ESLint config.
+
+  --app
+
+    Initialize as an App Router project.
+
+  --src-dir
+
+    Initialize inside a `src/` directory.
+
+  --turbopack
+
+    Enable Turbopack by default for development.
+
+  --import-alias &lt;alias-to-configure&gt;
+
+    Specify import alias to use (default &quot;@/*&quot;).
+
+  --empty
+
+    Initialize an empty project.
+
+  --use-npm
+
+    Explicitly tell the CLI to bootstrap the application using npm
+
+  --use-pnpm
+
+    Explicitly tell the CLI to bootstrap the application using pnpm
+
+  --use-yarn
+
+    Explicitly tell the CLI to bootstrap the application using Yarn
+
+  --use-bun
+
+    Explicitly tell the CLI to bootstrap the application using Bun
+
+  -e, --example [name]|[github-url]
+
+    An example to bootstrap the app with. You can use an example name
+    from the official Next.js repo or a GitHub URL. The URL can use
+    any branch and/or subdirectory
+
+  --example-path &lt;path-to-example&gt;
+
+    In a rare case, your GitHub URL might contain a branch name with
+    a slash (e.g. bug/fix-1) and the path to the example (e.g. foo/bar).
+    In this case, you must specify the path to the example separately:
+    --example-path foo/bar
+
+  --reset-preferences
+
+    Explicitly tell the CLI to reset any stored preferences
+
+  --skip-install
+
+    Explicitly tell the CLI to skip installing packages
+
+  --disable-git
+
+    Explicitly tell the CLI to skip initializing a git repository.
+
+  --yes
+
+    Use previous preferences or defaults for all options that were not
+    explicitly specified, without prompting.
+
+  -h, --help                           display help for command
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3><span class="section-number">3.2.3. </span>Install dependencies and run the project<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>Navigate to the project directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">app</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install the dependencies</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">install</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start the project</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#The application is running at http://localhost:5173</span>
+<span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">dev</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">dev</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build the app</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install-vscode-typescript.html" class="btn btn-neutral float-left" title="2. TypeScript in Visual Studio Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, David G..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

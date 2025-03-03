@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Python Environment &mdash; Develop Environment Setup Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom-theme.css?v=63e39a35" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Sphinx Doc Environment" href="install-sphinx-doc.html" />
+    <link rel="prev" title="Develop Environment Setup Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Develop Environment Setup Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Python Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. Install python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-python-pip">1.2. Install Python PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtual-environment">1.3. Virtual Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-virtual-environment">1.3.1. Create Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activate-the-virtual-environment">1.3.2. Activate the Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-packages">1.3.3. Install Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-requirements-txt-file">1.3.4. Generate requirements.txt file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#third-party-libraries-requirements-txt">1.3.4.1. Third-party Libraries requirements.txt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-project-requirements-txt">1.3.4.2. Current Project requirements.txt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-requirements-txt">1.3.4.3. Install requirements.txt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial-setting-up-python-virtual-environment">1.4. Tutorial: Setting Up Python Virtual Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#activate-your-virtual-environment">1.4.1. Activate Your Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-dependencies">1.4.2. Install Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-the-requirements-txt-file">1.4.3. Generate the requirements.txt File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#review-your-requirement-txt-file">1.4.4. Review your requirement.txt file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-requirements-txt-in-python-using-pipreqs">1.4.5. Generate requirements.txt in Python Using pipreqs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-pipreqs">1.4.5.1. Installing pipreqs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generating-requirements-txt-with-pipreqs">1.4.5.2. Generating requirements.txt with pipreqs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#install-packages-using-pip-with-requirements-txt-file-in-python">1.4.6. Install Packages Using PIP With requirements.txt File in Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-sphinx-doc.html">2. Sphinx Doc Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-github-pages.html">3. Hosting Sphinx Doc on GitHub Pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NodeJS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install-nodejs.html">1. NodeJS Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-vscode-typescript.html">2. TypeScript in Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-react-app.html">3. Create a React App</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Develop Environment Setup Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Python Environment</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="title-center h1" id="python-environment">
+<span id="install-python"></span><h1><span class="section-number">1. </span>Python Environment<a class="headerlink" href="#python-environment" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>Install python<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Visit the official Python download page and select an appropriate version to download.</p></li>
+<li><p>Double-click the installer and follow the on-screen instructions. Don’t forget to check the “Add Python to PATH” option, which automatically adds Python’s path to the PATH environment variable.</p></li>
+<li><p>You can click “Install Now” for a standard installation; to customize the installation options, including choosing the installation path and configuring advanced options, select “Customize installation.”</p></li>
+<li><p>Verify Python installation</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># verify Python installation</span>
+<span class="linenos">2</span>python<span class="w"> </span>--version
+<span class="linenos">3</span>python<span class="w"> </span>-V
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="install-python-pip">
+<h2><span class="section-number">1.2. </span>Install Python PIP<a class="headerlink" href="#install-python-pip" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul>
+<li><p>Download the get-pip.py <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a> file</p></li>
+<li><p>Run <cite>python get-pip.py</cite></p></li>
+<li><p>Run command</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Install PIP</span>
+<span class="linenos">2</span>python<span class="w"> </span>get-pip.py
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># PIP Verification</span>
+<span class="linenos">5</span>pip<span class="w"> </span>-V
+<span class="linenos">6</span>pip<span class="w"> </span>--version
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="c1"># Update PIP</span>
+<span class="linenos">9</span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="virtual-environment">
+<h2><span class="section-number">1.3. </span>Virtual Environment<a class="headerlink" href="#virtual-environment" title="Link to this heading"></a></h2>
+<section id="create-virtual-environment">
+<h3><span class="section-number">1.3.1. </span>Create Virtual Environment<a class="headerlink" href="#create-virtual-environment" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>Create the &lt;project&gt; folder.</p></li>
+<li><p>Navigate to the &lt;project&gt; folder.</p></li>
+<li><p>Use venv to create a virtual isolated environment.</p></li>
+<li><p>Run command</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Create a Python virtual environment</span>
+<span class="linenos">2</span><span class="c1"># Create a .venv directory in the current directory</span>
+<span class="linenos">3</span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="activate-the-virtual-environment">
+<h3><span class="section-number">1.3.2. </span>Activate the Virtual Environment<a class="headerlink" href="#activate-the-virtual-environment" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># windows</span>
+<span class="linenos">2</span>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat<span class="w"> </span><span class="c1"># activate the Python virtual environment</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="install-packages">
+<h3><span class="section-number">1.3.3. </span>Install Packages<a class="headerlink" href="#install-packages" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Installing py packages</span>
+<span class="linenos">2</span><span class="c1"># windows</span>
+<span class="linenos">3</span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple<span class="w"> </span>-U<span class="w"> </span>sphinx<span class="w"> </span>sphinx_rtd_theme<span class="w"> </span>myst-parser<span class="w"> </span>sphinx-autobuild<span class="w"> </span>sphinx-design
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="generate-requirements-txt-file">
+<h3><span class="section-number">1.3.4. </span>Generate requirements.txt file<a class="headerlink" href="#generate-requirements-txt-file" title="Link to this heading"></a></h3>
+<section id="third-party-libraries-requirements-txt">
+<h4><span class="section-number">1.3.4.1. </span>Third-party Libraries requirements.txt<a class="headerlink" href="#third-party-libraries-requirements-txt" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p>Open Terminal</p></li>
+<li><p>Navigate to any folder</p></li>
+<li><p>Generate all local environment dependencies.</p></li>
+<li><p>pip freeze &gt; requirements.txt</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># open terminal</span>
+<span class="linenos">2</span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="current-project-requirements-txt">
+<h4><span class="section-number">1.3.4.2. </span>Current Project requirements.txt<a class="headerlink" href="#current-project-requirements-txt" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p>Open Terminal</p></li>
+<li><p>Navigate to the &lt;project&gt; folder</p></li>
+<li><p>To export the libraries used in the current project, navigate to the root directory of the project, then run the pipreqs ./ –encoding=utf8 command. This avoids encoding errors and automatically generates the requirements.txt file in the root directory.</p></li>
+<li><p>pipreqs ./</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Install pipreqs package</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>pipreqs
+<span class="linenos">3</span><span class="c1"># Export the libraries used in the current project to generate the requirements.txt.</span>
+<span class="linenos">4</span>pipreqs<span class="w"> </span>./
+<span class="linenos">5</span><span class="c1"># This command avoids encoding errors,</span>
+<span class="linenos">6</span>pipreqs<span class="w"> </span>./<span class="w"> </span>--encoding<span class="o">=</span>utf8
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="install-requirements-txt">
+<h4><span class="section-number">1.3.4.3. </span>Install requirements.txt<a class="headerlink" href="#install-requirements-txt" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p>It is best to create a new environment first to ensure isolation.</p></li>
+<li><p>pip install -r requirements.txt -i <a class="reference external" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Install requirements.txt</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="linenos">3</span><span class="c1"># OR</span>
+<span class="linenos">4</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>-i<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="tutorial-setting-up-python-virtual-environment">
+<h2><span class="section-number">1.4. </span>Tutorial: Setting Up Python Virtual Environment<a class="headerlink" href="#tutorial-setting-up-python-virtual-environment" title="Link to this heading"></a></h2>
+<section id="activate-your-virtual-environment">
+<h3><span class="section-number">1.4.1. </span>Activate Your Virtual Environment<a class="headerlink" href="#activate-your-virtual-environment" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Create a virtual environment</span>
+<span class="linenos">2</span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># Activate the virtual environment - Windows</span>
+<span class="linenos">5</span>myenv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<span class="linenos">6</span><span class="c1"># Activate the virtual environment - macOS and Linux</span>
+<span class="linenos">7</span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="install-dependencies">
+<h3><span class="section-number">1.4.2. </span>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Install Dependencies</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>package-name
+<span class="linenos">3</span><span class="c1"># i.e. pip install pandas</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="generate-the-requirements-txt-file">
+<h3><span class="section-number">1.4.3. </span>Generate the requirements.txt File<a class="headerlink" href="#generate-the-requirements-txt-file" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Generate the requirements.txt File</span>
+<span class="linenos">2</span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="review-your-requirement-txt-file">
+<h3><span class="section-number">1.4.4. </span>Review your requirement.txt file<a class="headerlink" href="#review-your-requirement-txt-file" title="Link to this heading"></a></h3>
+<p>#. Open the requirement.txt in a text editor
+#.</p>
+</section>
+<section id="generate-requirements-txt-in-python-using-pipreqs">
+<h3><span class="section-number">1.4.5. </span>Generate requirements.txt in Python Using pipreqs<a class="headerlink" href="#generate-requirements-txt-in-python-using-pipreqs" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>pipreqs is a tool that generates a requirements.txt file for your Python project based on imports in your project and not just the packages installed in your Python environment. This often results in a cleaner and more accurate requirements.txt file.</p>
+</div></blockquote>
+<section id="installing-pipreqs">
+<h4><span class="section-number">1.4.5.1. </span>Installing pipreqs<a class="headerlink" href="#installing-pipreqs" title="Link to this heading"></a></h4>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Installing pipreqs</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>pipreqs
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="generating-requirements-txt-with-pipreqs">
+<h4><span class="section-number">1.4.5.2. </span>Generating requirements.txt with pipreqs<a class="headerlink" href="#generating-requirements-txt-with-pipreqs" title="Link to this heading"></a></h4>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Generating requirements.txt with pipreqs</span>
+<span class="linenos">2</span>pipreqs<span class="w"> </span>/path/to/project
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># Force ignore .venv</span>
+<span class="linenos">5</span>pipreqs<span class="w"> </span>--ignore<span class="w"> </span>.venv<span class="w"> </span>--force
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="install-packages-using-pip-with-requirements-txt-file-in-python">
+<h3><span class="section-number">1.4.6. </span>Install Packages Using PIP With requirements.txt File in Python<a class="headerlink" href="#install-packages-using-pip-with-requirements-txt-file-in-python" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Installing packages</span>
+<span class="linenos">2</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>-i<span class="w"> </span>https://xxxx
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Develop Environment Setup Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install-sphinx-doc.html" class="btn btn-neutral float-right" title="2. Sphinx Doc Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, David G..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

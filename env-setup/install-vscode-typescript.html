@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. TypeScript in Visual Studio Code &mdash; Develop Environment Setup Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom-theme.css?v=63e39a35" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Create a React App" href="create-react-app.html" />
+    <link rel="prev" title="1. NodeJS Environment" href="install-nodejs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Develop Environment Setup Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install-python.html">1. Python Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-sphinx-doc.html">2. Sphinx Doc Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-github-pages.html">3. Hosting Sphinx Doc on GitHub Pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NodeJS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install-nodejs.html">1. NodeJS Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. TypeScript in Visual Studio Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-visual-studio-code">2.1. Install Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-typescript-to-a-project">2.2. Install Typescript to a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-vscode-extensions">2.3. Install VSCode extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-github-copilot-extension">2.3.1. Install GitHub Copilot Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-linting-to-vscode">2.3.2. Adding linting to VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-code-formatting">2.3.3. Adding code formatting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configure-prettier-in-the-project">2.3.3.1. Configure Prettier in the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-prettier-code-formatter-in-visual-studio-code">2.3.3.2. Install Prettier – Code formatter in Visual Studio Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-editorconfig-for-vs-code">2.3.3.3. Install EditorConfig for VS Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="create-react-app.html">3. Create a React App</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Develop Environment Setup Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>TypeScript in Visual Studio Code</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="title-center h1" id="typescript-in-visual-studio-code">
+<span id="install-vscode-typescript"></span><h1><span class="section-number">2. </span>TypeScript in Visual Studio Code<a class="headerlink" href="#typescript-in-visual-studio-code" title="Link to this heading"></a></h1>
+<section id="install-visual-studio-code">
+<h2><span class="section-number">2.1. </span>Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Link to this heading"></a></h2>
+<p>To install Visual Studio Code (VS Code) on your system, follow the steps below:</p>
+<ol class="arabic">
+<li><p>Download VS Code</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go to the official Visual Studio Code website: <a class="reference external" href="https://code.visualstudio.com">https://code.visualstudio.com</a></p></li>
+<li><p>Click on the Download button. The website will automatically detect your operating system (Windows, macOS, or Linux).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Install VS Code on Windows</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Run the Installer: Once the download is complete, run the installer (VSCodeSetup-x64-&lt;version&gt;.exe).</p></li>
+<li><p>Accept the License Agreement: Follow the installation wizard. You will be prompted to accept the license agreement and choose the installation location.</p></li>
+<li><p>Customize Installation: You can choose additional options such as creating desktop icons, adding to PATH, etc.</p></li>
+<li><p>Complete Installation: Once you’re ready, click Install and wait for the installation to complete.</p></li>
+<li><p>Launch VS Code: After the installation, you can launch Visual Studio Code either from the Start Menu or directly from the desktop shortcut.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Verify the Installation. Open a terminal or command prompt and type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="install-typescript-to-a-project">
+<h2><span class="section-number">2.2. </span>Install Typescript to a project<a class="headerlink" href="#install-typescript-to-a-project" title="Link to this heading"></a></h2>
+<p>To install TypeScript in a project, follow these steps:</p>
+<ol class="arabic">
+<li><p>Creating a new project folder</p></li>
+<li><p>Navigate to the project folder</p></li>
+<li><p>Initialize the project and generate a package.json file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">init</span> <span class="o">-</span><span class="n">y</span>
+<span class="c1">#yarn</span>
+<span class="n">yarn</span> <span class="n">init</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install TypeScript as a Development Dependency</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">dev</span> <span class="n">typescript</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">add</span> <span class="n">typescript</span> <span class="o">--</span><span class="n">dev</span>
+</pre></div>
+</div>
+</li>
+<li><p>Verify Installation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npx</span> <span class="n">tsc</span> <span class="o">--</span><span class="n">version</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">tsc</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a TypeScript Configuration File <code class="docutils literal notranslate"><span class="pre">tsconfig.json</span></code> (Optional)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npx</span> <span class="n">tsc</span> <span class="o">--</span><span class="n">init</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">tsc</span> <span class="o">--</span><span class="n">init</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create TypeScript Files <code class="docutils literal notranslate"><span class="pre">.ts</span></code> files</p></li>
+<li><p>Compile TypeScript Code</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm</span>
+<span class="n">npx</span> <span class="n">tsc</span>
+<span class="c1"># npm compile a specific file app.ts</span>
+<span class="n">npx</span> <span class="n">tsc</span> <span class="n">app</span><span class="o">.</span><span class="n">ts</span>
+<span class="c1"># yarn</span>
+<span class="n">yarn</span> <span class="n">tsc</span>
+<span class="c1"># yarn compile a specific file app.ts</span>
+<span class="n">yarn</span> <span class="n">tsc</span> <span class="n">app</span><span class="o">.</span><span class="n">ts</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run the Compiled JavaScript Code, eg app.js</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># npm run app.js file</span>
+<span class="n">node</span> <span class="n">app</span><span class="o">.</span><span class="n">js</span>
+<span class="c1"># yarn</span>
+<span class="n">node</span> <span class="n">app</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="install-vscode-extensions">
+<h2><span class="section-number">2.3. </span>Install VSCode extensions<a class="headerlink" href="#install-vscode-extensions" title="Link to this heading"></a></h2>
+<section id="install-github-copilot-extension">
+<h3><span class="section-number">2.3.1. </span>Install GitHub Copilot Extension<a class="headerlink" href="#install-github-copilot-extension" title="Link to this heading"></a></h3>
+<p>To install GitHub Copilot in Visual Studio Code (VS Code), follow these steps:</p>
+<ol class="arabic">
+<li><p>Open up the Extensions area in Visual Studio Code, click the <code class="docutils literal notranslate"><span class="pre">Extensions</span></code> icon (or press Ctrl+Shift+X) or click the following menus in sequence:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>On <code class="docutils literal notranslate"><span class="pre">Windows</span></code>: File &gt; Preferences &gt; Extensions</p></li>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">macOS</span></code>: Code &gt; Preferences &gt; Extensions</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code> into the extensions list search box</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span></code> extension by GitHub</p></li>
+<li><p>Click the Install button to install the extension.</p></li>
+<li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Copilot</span> <span class="pre">Chat</span></code> extension is installed as well</p></li>
+<li><p>Sign in to GitHub</p></li>
+<li><p>Start Using GitHub Copilot</p></li>
+</ol>
+</section>
+<section id="adding-linting-to-vscode">
+<h3><span class="section-number">2.3.2. </span>Adding linting to VSCode<a class="headerlink" href="#adding-linting-to-vscode" title="Link to this heading"></a></h3>
+<p>Linting is the process of checking code for potential problems. It is common practice to use linting tools to catch problems early in the development process as code is written. ESLint is a popular tool that can lint React and TypeScript code. Editors such as Visual Studio Code can be integrated with ESLint to highlight potential problems.</p>
+<p>Carry out the following steps to install an ESLint extension into Visual Studio Code:</p>
+<ol class="arabic">
+<li><p>Open up the Extensions area in Visual Studio Code</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>On <code class="docutils literal notranslate"><span class="pre">Windows</span></code>: File &gt; Preferences &gt; Extensions</p></li>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">macOS</span></code>: Code &gt; Preferences &gt; Extensions</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Enter eslint into the extensions list search box</p></li>
+<li><p>Select the ESLint extension by Microsoft</p></li>
+<li><p>Click the Install button to install the extension.</p></li>
+<li><p>Make sure the ESLint extension is configured to check typeScript and/or react/vue/html etc.</p>
+<blockquote>
+<div><ul>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">Windows</span></code>: File &gt; Preferences &gt; Settings</p></li>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">macOS</span></code>: Code &gt; Preferences &gt; Settings</p>
+<blockquote>
+<div><ul>
+<li><p>In the settings search box, enter eslint: probe. This setting defines the languages to use when ESLint checks code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Check</span> <span class="n">User</span> <span class="n">Tab</span>
+<span class="o">-</span> <span class="n">Check</span> <span class="n">Workspace</span> <span class="n">Tab</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check supported language ids. eg. javascript/typeScript/react/vue/html/typescriptreact</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Item</span></code> button to add a specific language id.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>For more information about ESLint, see the following link: <a class="reference external" href="https://eslint.org/">https://eslint.org/</a>.</p></li>
+</ol>
+</section>
+<section id="adding-code-formatting">
+<h3><span class="section-number">2.3.3. </span>Adding code formatting<a class="headerlink" href="#adding-code-formatting" title="Link to this heading"></a></h3>
+<p>Automatic code formatting ensures code is consistently formatted, which helps its readability. Having consistently formatted code also helps developers see the important changes in a code review – rather than differences in formatting. Prettier is a popular tool capable of formatting React and TypeScript code.</p>
+<section id="configure-prettier-in-the-project">
+<h4><span class="section-number">2.3.3.1. </span>Configure Prettier in the project<a class="headerlink" href="#configure-prettier-in-the-project" title="Link to this heading"></a></h4>
+<p>Carry out the following steps to install and configure Prettier in the project:</p>
+<ol class="arabic">
+<li><p>Install Prettier. Prettier is installed as a development dependency because it is only used during development time and not at runtime.</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 2.3 </span><span class="caption-text">Install Prettier</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="na">npm i -D prettier</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install the following two libraries (eslint-config-prettier and eslint-plugin-prettier) to allow Prettier to take responsibility for the styling rules from ESLint, as Prettier has overlapping style rules with ESLint:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 2.4 </span><span class="caption-text">Install ESLint-Prettier</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># eslint-config-prettier disables conflicting ESLint rules</span>
+<span class="linenos">2</span><span class="c1"># eslint-plugin-prettier is an ESLint rule that formats code using Prettier.</span>
+<span class="linenos">3</span><span class="na">npm i -D eslint-config-prettier eslint-plugin-prettier</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Update the eslintConfig section in package.json to allow Prettier to manage the styling rules as follows:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 2.5 </span><span class="caption-text">eslintConfig section in package.json</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="na">{</span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="na">...,</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="na">&quot;eslintConfig&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">{</span>
+<span class="linenos"> 4</span><span class="w">      </span><span class="na">&quot;extends&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">[</span>
+<span class="linenos"> 5</span><span class="w">          </span><span class="na">....,</span>
+<span class="linenos"> 6</span><span class="w">          </span><span class="na">&quot;plugin</span><span class="o">:</span><span class="s">prettier/recommended&quot;</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="na">]</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="na">},</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="na">...</span>
+<span class="linenos">10</span><span class="na">}</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create the Prettier conflicting file called .prettierrc.json.</p>
+<blockquote>
+<div><ul>
+<li><p>Specified as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Lines wrap at 100 characters</p></li>
+<li><p>String qualifiers are single quotes</p></li>
+<li><p>Semicolons are placed at the end of statements</p></li>
+<li><p>The indentation level is two spaces</p></li>
+<li><p>A trailing comma is added to multi-line arrays and objects</p></li>
+<li><p>Existing line endings are maintained</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 2.6 </span><span class="caption-text">.prettierrc.json in the project root folder</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="na">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="na">&quot;printWidth&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">100,</span>
+<span class="linenos">3</span><span class="w">    </span><span class="na">&quot;singleQuote&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">true,</span>
+<span class="linenos">4</span><span class="w">    </span><span class="na">&quot;semi&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">true,</span>
+<span class="linenos">5</span><span class="w">    </span><span class="na">&quot;tabWidth&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">2,</span>
+<span class="linenos">6</span><span class="w">    </span><span class="na">&quot;trailingComma&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;all&quot;</span><span class="na">,</span>
+<span class="linenos">7</span><span class="w">    </span><span class="na">&quot;endOfLine&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;auto&quot;</span>
+<span class="linenos">8</span><span class="na">}</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>More information on the configuration options can be found at the following link: <a class="reference external" href="https://prettier.io/docs/en/options.html">https://prettier.io/docs/en/options.html</a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Prettier is now installed and configured in the project.</p></li>
+</ol>
+</section>
+<section id="install-prettier-code-formatter-in-visual-studio-code">
+<h4><span class="section-number">2.3.3.2. </span>Install Prettier – Code formatter in Visual Studio Code<a class="headerlink" href="#install-prettier-code-formatter-in-visual-studio-code" title="Link to this heading"></a></h4>
+<p>Visual Studio Code can integrate with Prettier to automatically format code when source files are saved.</p>
+<p>Carry out the following steps to install and configure a Prettier extension into Visual Studio Code:</p>
+<ol class="arabic">
+<li><p>Open up the Extensions area in Visual Studio Code</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>On <code class="docutils literal notranslate"><span class="pre">Windows</span></code>: File &gt; Preferences &gt; Extensions</p></li>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">macOS</span></code>: Code &gt; Preferences &gt; Extensions</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Enter prettier into the extensions list search box</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Prettier</span> <span class="pre">–</span> <span class="pre">Code</span> <span class="pre">formatter</span></code> extension by Prettier</p></li>
+<li><p>Click the Install button to install the extension.</p></li>
+<li><p>Open the Settings area in Visual Studio Code</p>
+<blockquote>
+<div><ul>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">Windows</span></code>: File &gt; Preferences &gt; Settings</p></li>
+<li><p>On <code class="docutils literal notranslate"><span class="pre">macOS</span></code>: Code &gt; Preferences &gt; Settings</p>
+<blockquote>
+<div><ul>
+<li><p>Setting Automatically Format Code On Save</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Workspace</span></code> tab</p></li>
+<li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">On</span> <span class="pre">Save</span></code> option is ticked</p></li>
+<li><p>This setting tells Visual Studio Code to automatically format code in files that are saved.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Setting Default Formatter to <code class="docutils literal notranslate"><span class="pre">Prettier</span> <span class="pre">-</span> <span class="pre">Code</span> <span class="pre">formatter</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Workspace</span></code> tab</p></li>
+<li><p>Find the <code class="docutils literal notranslate"><span class="pre">Editor:</span> <span class="pre">Default</span> <span class="pre">Formatter</span></code> option</p></li>
+<li><p>Make sure Default Formatter is set to <code class="docutils literal notranslate"><span class="pre">Prettier</span> <span class="pre">-</span> <span class="pre">Code</span> <span class="pre">formatter</span></code></p></li>
+<li><p>This is the default formatter that Visual Studio Code should use to format code</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The Prettier extension for Visual Studio Code is now installed and configured in the project.</p></li>
+</ol>
+</section>
+<section id="install-editorconfig-for-vs-code">
+<h4><span class="section-number">2.3.3.3. </span>Install EditorConfig for VS Code<a class="headerlink" href="#install-editorconfig-for-vs-code" title="Link to this heading"></a></h4>
+<p>EditorConfig (<a class="reference external" href="https://editorconfig.org">https://editorconfig.org</a>) is picked up by IDEs to alter their default behavior (e.g. make IDEs put the right tab size when you press TAB or always add a new line at the end of the file on save). It attempts to override user/workspace settings with settings found in .editorconfig files. No additional or vscode-specific files are required. As with any EditorConfig plugin, if root=true is not specified, EditorConfig will continue to look for an .editorconfig file outside of the project.</p>
+<ol class="arabic">
+<li><p>Add .editorconfig (<a class="reference external" href="https://editorconfig.org">https://editorconfig.org</a>) to the root of the project</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="p">[</span><span class="o">*</span><span class="p">]</span>
+<span class="n">indent_style</span> <span class="o">=</span> <span class="n">space</span>
+<span class="n">indent_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">end_of_line</span> <span class="o">=</span> <span class="n">lf</span>
+<span class="n">insert_final_newline</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">trim_trailing_whitespace</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+</li>
+<li><p>Reload VS Code (open the command palette, find and use “Reload Window”).</p></li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install-nodejs.html" class="btn btn-neutral float-left" title="1. NodeJS Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="create-react-app.html" class="btn btn-neutral float-right" title="3. Create a React App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, David G..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
